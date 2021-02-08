@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Войти{% endblock %}
+{% block content %}
+{% load user_filters %}
+
+<div>
+<p>Введите код, который пришел Вамна email <br>
+    Либо просто скопируйте его с url (последние 4 цифры это он)
+</p>
+<form method="post" >
+    {% csrf_token %}
+    <p><input type="number"name="num"></p>
+    <button type="submit">Выложить</button>
+</form>
+</div>
+{% endblock %}
