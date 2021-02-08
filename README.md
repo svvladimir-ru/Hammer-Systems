@@ -50,6 +50,10 @@ $ sudo apt install docker-ce -y
 
 ```sh
 $ docker run -d -p 6379:6379 redis
+```
+
+И находясь в папке проекта
+```sh
 $ celery -A hammer worker --loglevel=INFO
 ```
 
